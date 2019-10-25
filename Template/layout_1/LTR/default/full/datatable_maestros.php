@@ -420,6 +420,15 @@
 								</span>
 							</a>
 						</li>
+						<li class="nav-item">
+							<a href="form_acesorias.php" class="nav-link">
+								<i class="icon-file-upload"></i>
+								<span>
+									Agendar asesoria
+									<span class="d-block font-weight-normal opacity-50">No active orders</span>
+								</span>
+							</a>
+						</li>
 						<!-- /main -->
 
 						<!-- Forms -->
@@ -443,6 +452,7 @@
 							<ul class="nav nav-group-sub" data-submenu-title="Form components">
 								<li class="nav-item"><a href="datatable_basic.php" class="nav-link">Tabla de información de alumnos</a></li>
 								<li class="nav-item"><a href="datatable_maestros.php" class="nav-link">Tabla de información de maestros</a></li>
+								<li class="nav-item"><a href="datatable_acesorias.php" class="nav-link">Tabla de información de asesorias</a></li>
 							</ul>
 						</li>
 

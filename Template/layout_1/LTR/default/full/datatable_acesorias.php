@@ -23,15 +23,11 @@
 	<!-- /core JS files -->
 
 	<!-- Theme JS files -->
-	<script src="../../../../global_assets/js/plugins/visualization/d3/d3.min.js"></script>
-	<script src="../../../../global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
-	<script src="../../../../global_assets/js/plugins/forms/styling/switchery.min.js"></script>
-	<script src="../../../../global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
-	<script src="../../../../global_assets/js/plugins/ui/moment/moment.min.js"></script>
-	<script src="../../../../global_assets/js/plugins/pickers/daterangepicker.js"></script>
+	<script src="../../../../global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/forms/selects/select2.min.js"></script>
 
 	<script src="assets/js/app.js"></script>
-	<script src="../../../../global_assets/js/demo_pages/dashboard.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/datatables_basic.js"></script>
 	<!-- /theme JS files -->
 
 </head>
@@ -403,9 +399,9 @@
 				<!-- Main navigation -->
 				<div class="card card-sidebar-mobile">
 					<ul class="nav nav-sidebar" data-nav-type="accordion">
-						
-				<!-- Main -->
-						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu" title="Main"></i></li>
+
+							<!-- Main -->
+					<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu" title="Main"></i></li>
 						<li class="nav-item">
 							<a href="index.php" class="nav-link">
 								<i class="icon-home4"></i>
@@ -461,9 +457,7 @@
 						</li>
 
 						
-						<!-- /tables -->
-
-						
+						<!-- /tables -->						
 						<!-- /tables -->
 
 					</ul>
@@ -484,7 +478,7 @@
 			<div class="page-header page-header-light">
 				<div class="page-header-content header-elements-md-inline">
 					<div class="page-title d-flex">
-						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Bienvenidos</span></h4>
+						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Base de datos</span> - Maestro</h4>
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
 					</div>
 
@@ -501,7 +495,8 @@
 					<div class="d-flex">
 						<div class="breadcrumb">
 							<a href="index.html" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
-							<span class="breadcrumb-item active">Inicio</span>
+							<a href="datatable_basic.html" class="breadcrumb-item">Datatables</a>
+							<span class="breadcrumb-item active">Alumnos</span>
 						</div>
 
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
@@ -532,243 +527,119 @@
 					</div>
 				</div>
 			</div>
-
 			<!-- /page header -->
 
-<!-- Content area -->
+
+			<!-- Content area -->
 			<div class="content">
 
+				<!-- Basic datatable -->
+				<div class="card">
+					<div class="card-header header-elements-inline">
+						<h5 class="card-title">List</h5>
+						<div class="header-elements">
+							<div class="list-icons">
+		                		<a class="list-icons-item" data-action="collapse"></a>
+		                		<a class="list-icons-item" data-action="reload"></a>
+		                		<a class="list-icons-item" data-action="remove"></a>
+		                	</div>
+	                	</div>
+					</div>
+					<table class="table datatable-basic">
+						<thead>
+							<tr>
+								<th>Nombre del alumno</th>
+								<th>Nombre del maestro</th>
+								<th>Carrera</th>
+								<th>Dia agendado</th>
+								<th>Asesoria</th>
+								<th class="text-center">Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Andres Reyes</td>
+								<td>Arnoldo Zuñiga</a></td>
+								<td>ITI</td>
+								<td>5/10/2019</td>
+								<td><span class="badge badge-success">Realizada</span></td>
+								<td class="text-center">
+									<div class="list-icons">
+										<div class="dropdown">
+											<a href="#" class="list-icons-item" data-toggle="dropdown">
+												<i class="icon-menu9"></i>
+											</a>
+
+											<div class="dropdown-menu dropdown-menu-right">
+												<a href="#" class="dropdown-item"><i class="icon-cross2"></i> Eliminar</a>
+												<a href="#" class="dropdown-item"><i class="icon-pencil6 "></i> Editar datos</a>
+												<a href="#" class="dropdown-item"><i class="icon-pencil5"></i> Revisar archivos</a>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>Juan Jimenez</td>
+								<td>Juan Rosales</a></td>
+								<td>IMS</td>
+								<td>29/10/2019</td>
+								<td><span class="badge badge-danger">No realizada</span></td>
+								<td class="text-center">
+									<div class="list-icons">
+										<div class="dropdown">
+											<a href="#" class="list-icons-item" data-toggle="dropdown">
+												<i class="icon-menu9"></i>
+											</a>
+
+											<div class="dropdown-menu dropdown-menu-right">
+												<a href="#" class="dropdown-item"><i class="icon-cross2"></i> Eliminar</a>
+												<a href="#" class="dropdown-item"><i class="icon-pencil6 "></i> Editar datos</a>
+												<a href="#" class="dropdown-item"><i class="icon-pencil5"></i> Revisar archivos</a>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>Alfonso Gonzales</td>
+								<td>Alexis Rodriguez</a></td>
+								<td>ISA</td>
+								<td>15/11/2019</td>
+								<td><span class="badge badge-secondary">En espera</span></td>
+								<td class="text-center">
+									<div class="list-icons">
+										<div class="dropdown">
+											<a href="#" class="list-icons-item" data-toggle="dropdown">
+												<i class="icon-menu9"></i>
+											</a>
+
+											<div class="dropdown-menu dropdown-menu-right">
+												<a href="#" class="dropdown-item"><i class="icon-cross2"></i> Eliminar</a>
+												<a href="#" class="dropdown-item"><i class="icon-pencil6 "></i> Editar datos</a>
+												<a href="#" class="dropdown-item"><i class="icon-pencil5"></i> Revisar archivos</a>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- /basic datatable -->
+
+
+				
+			</div>
+			<!-- /content area -->
+
+
+			
+		</div>
 		<!-- /main content -->
 
-		<div class="row">
-					<div class="col-x1-7">
-		<!-- User details (with sample pattern) -->
-						<div class="card">
-							<div class="card-body bg-blue text-center card-img-top" style="background-image: url(../../../../global_assets/images/backgrounds/panel_bg.png); background-size: contain;">
-								<div class="card-img-actions d-inline-block mb-3">
-									<img class="img-fluid rounded-circle" src="../../../../global_assets/images/placeholders/placeholder.jpg" width="170" height="170" alt="">
-									<div class="card-img-actions-overlay card-img rounded-circle">
-										<a href="#" class="btn btn-outline bg-white text-white border-white border-2 btn-icon rounded-round">
-											<i class="icon-plus3"></i>
-										</a>
-										<a href="user_pages_profile.html" class="btn btn-outline bg-white text-white border-white border-2 btn-icon rounded-round ml-2">
-											<i class="icon-link"></i>
-										</a>
-									</div>
-								</div>
-
-								<h6 class="font-weight-semibold mb-0">Victoria Davidson</h6>
-								<span class="d-block opacity-75">Head of UX</span>
-
-								<ul class="list-inline list-inline-condensed mt-3 mb-0">
-									<li class="list-inline-item">
-										<a href="#" class="btn btn-outline bg-white btn-icon text-white border-white border-2 rounded-round">
-											<i class="icon-google-drive"></i>
-										</a>
-									</li>
-									<li class="list-inline-item">
-										<a href="#" class="btn btn-outline bg-white btn-icon text-white border-white border-2 rounded-round">
-											<i class="icon-twitter"></i>
-										</a>
-									</li>
-									<li class="list-inline-item">
-										<a href="#" class="btn btn-outline bg-white btn-icon text-white border-white border-2 rounded-round">
-											<i class="icon-github"></i>
-										</a>
-									</li>
-								</ul>
-							</div>
-
-							<div class="card-body border-top-0">
-								<div class="d-sm-flex flex-sm-wrap mb-3">
-									<div class="font-weight-semibold">Nombre:</div>
-									<div class="ml-sm-auto mt-2 mt-sm-0">Victoria Anna Davidson</div>
-								</div>
-
-								<div class="d-sm-flex flex-sm-wrap mb-3">
-									<div class="font-weight-semibold">Telefono:</div>
-									<div class="ml-sm-auto mt-2 mt-sm-0">+3630 8911837</div>
-								</div>
-
-								<div class="d-sm-flex flex-sm-wrap mb-3">
-									<div class="font-weight-semibold">Email:</div>
-									<div class="ml-sm-auto mt-2 mt-sm-0"><a href="#">corporate@domain.com</a></div>
-								</div>
-							</div>
-					</div>
-						<!-- /user details (with sample pattern) -->
-						<!-- Seamless button group -->
-						<div class="mb-3">
-							<div class="row row-tile no-gutters">
-								<div class="col-6">
-									<button type="button" class="btn btn-light btn-block btn-float m-0">
-										<i class="icon-github4 icon-2x"></i>
-										<span>Github</span>
-									</button>
-
-									<button type="button" class="btn btn-light btn-block btn-float m-0">
-										<i class="icon-dropbox text-blue-400 icon-2x"></i>
-										<span>Dropbox</span>
-									</button>
-								</div>
-								
-								<div class="col-6">
-									<button type="button" class="btn btn-light btn-block btn-float m-0">
-										<i class="icon-dribbble3 text-pink-400 icon-2x"></i>
-										<span>Dribbble</span>
-									</button>
-
-									<button type="button" class="btn btn-light btn-block btn-float m-0">
-										<i class="icon-google-drive text-success-400 icon-2x"></i>
-										<span>Google Drive</span>
-									</button>
-								</div>
-							</div>
-						</div>
-						<!-- /seamless button group -->
-		<!-- Messages widget -->
-		<div class="col-x1-8">
-						<div class="card">
-							<div class="card-header header-elements-inline">
-								<h6 class="card-title">Messages</h6>
-
-								<div class="header-elements">
-									<a href="#" class="text-default"><i class="icon-cog3"></i></a>
-			                	</div>
-							</div>
-
-							<div class="card-body">
-								<ul class="media-list">
-									<li class="media">
-										<div class="mr-3 position-relative">
-											<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="36" jeight="36" alt="">
-											<span class="badge bg-danger-400 badge-pill badge-float border-2 border-white">5</span>
-										</div>
-
-										<div class="media-body">
-											<div class="d-flex justify-content-between">
-												<div class="media-title"><a href="#">James Alexander</a></div>
-												<span class="font-size-sm text-muted">14:58</span>
-											</div>
-
-											Who knows, maybe that would be the best thing for me...
-										</div>
-									</li>
-
-									<li class="media">
-										<div class="mr-3 position-relative">
-											<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="36" jeight="36" alt="">
-											<span class="badge bg-danger-400 badge-pill badge-float border-2 border-white">4</span>
-										</div>
-
-										<div class="media-body">
-											<div class="d-flex justify-content-between">
-												<div class="media-title"><a href="#">Margo Baker</a></div>
-												<span class="font-size-sm text-muted">12:16</span>
-											</div>
-
-											That was something he was unable to do because...
-										</div>
-									</li>
-
-									<li class="media">
-										<div class="mr-3">
-											<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="36" jeight="36" alt="">
-										</div>
-
-										<div class="media-body">
-											<div class="d-flex justify-content-between">
-												<div class="media-title"><a href="#">Jeremy Victorino</a></div>
-												<span class="font-size-sm text-muted">22:48</span>
-											</div>
-
-											But that would be extremely strained and suspicious...
-										</div>
-									</li>
-
-									<li class="media">
-										<div class="mr-3">
-											<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="36" jeight="36" alt="">
-										</div>
-
-										<div class="media-body">
-											<div class="d-flex justify-content-between">
-												<div class="media-title"><a href="#">Beatrix Diaz</a></div>
-												<span class="font-size-sm text-muted">Tue</span>
-											</div>
-
-											What a strenuous career it is that I've chosen...
-										</div>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					</div>
-				
-					<div class="col-xl-6">
-			<!-- Simple inline block with icon and button -->
-						<div class="card card-body">
-							<div class="media align-items-center align-items-md-start flex-column flex-md-row">
-								<a href="#" class="text-teal mr-md-3 mb-3 mb-md-0">
-									<i class="icon-question7 text-success-400 border-success-400 border-2 rounded-round p-2"></i>
-								</a>
-
-								<div class="media-body text-center text-md-left">
-									<h6 class="media-title font-weight-semibold">Tienes alguna pregunta de alguna materia?</h6>
-									Agenda tu asesoria aqui
-								</div>
-
-								<a href="#" class="btn bg-warning-400 ml-md-3 mt-3 mt-md-0">Agendar</a>
-							</div>
-						</div>
-						<!-- /simple inline block with icon and button -->
-						
-						<div class="card">
-							<div class="card-body text-center">
-							<i class="icon-book icon-2x text-success-400 border-success-400 border-3 rounded-round p-3 mb-3 mt-1"></i>
-								<h5 class="card-title">Knowledge Base</h5>
-								<p class="mb-3">Ouch found swore much dear conductively hid submissively hatchet vexed far</p>
-								<a href="#" class="btn bg-success-400">Browse articles</a>
-							</div>
-						</div>
-						<!-- /widget with rounded icon -->
-						<!-- Support ticket widget -->
-						<div class="card">
-							<div class="card-body">
-								<div class="d-flex flex-wrap justify-content-between mb-2">
-									<span class="font-size-xs line-height-xs text-uppercase text-muted font-weight-semibold">Nov 5, 11:25am</span>
-									<span class="font-size-xs line-height-xs text-uppercase text-success font-weight-semibold">5 hrs restante</span>
-								</div>
-
-								<h6 class="pt-1">
-									<a href="#">Entrega de la actividad 2</a>
-								</h6>
-
-								<p class="mb-3">Creacion de un repositorio en digital ocean</p>
-
-								<div class="d-flex flex-wrap align-items-center">
-									<a href="#" class="mr-1"><img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-round" width="36" height="36" alt=""></a>
-									<a href="#" class="mr-1"><img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-round" width="36" height="36" alt=""></a>
-									<a href="#" class="mr-1"><img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-round" width="36" height="36" alt=""></a>
-									<a href="#" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2"><i class="icon-plus2"></i></a> 
-								</div>
-
-							</div>
-						</div>
-						<!-- /support ticket widget -->
-
-
 	</div>
-
-						<!-- /messages widget -->
-</div>
-</div>
-</div>
-
-						
-
-
 	<!-- /page content -->
 
 </body>
